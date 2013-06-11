@@ -8,11 +8,3 @@ angular.module('orders-manage', []).
 		when('/orders', {templateUrl: 'partials/order-list.html', controller: OrderListCtrl}).
 		otherwise({redirectTo: '/orders'});
 	}]);
-	
-	/*.
-	filter('rules', function() {
-		return function(orders, form){
-			//..;
-		};
-	});
-*/
