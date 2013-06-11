@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function OrderListCtrl($scope, $http) {
+function OrderListCtrl($scope, $http, $filter) {
 	var source = [];
 	
 	$http.get('orders/orders.json').success(function(data) {
@@ -13,16 +13,12 @@ function OrderListCtrl($scope, $http) {
 	});
 	
 	$scope.filter = function(){
+	
+		if($scope.search.track !== undefined && $scope.search.track === false) {
+			delete $scope.search.track;
+		}
 			
-		$scope.$watch('form.orderStatus.$modelValue', function(newValue, oldValue) {
-			for(var i = $scope.orders.length - 1; i--; ) {
-			
-				if($scope.orders[i].status !== newValue){
-					$scope.orders.splice(i, 1);
-				
-				}
-			}
-		});
+		$scope.orders = $filter('filter')(source, $scope.search);
 
 	};
 };
