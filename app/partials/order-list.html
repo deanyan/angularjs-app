@@ -112,7 +112,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="order in orders">
+			<tr ng-repeat="order in orders | filter: search">
 				<td>{{order.status}}<ttd>
 				<td>{{order.date}}</td>
 				<td>{{order.time}}</td>
