@@ -3,8 +3,8 @@
 	<section class="manage-orders">
 		<div class="filter-orders">
 			<fieldset>
-				<lagend>Filter orders</lagend>
-				<form name="form" ng-model="filterOrders">
+				<legend>Filter orders</legend>
+				<form name="form" ng-model="filterOrders" class="ng-model: filterOrders">
 					<dl>
 						<dt>Order status:</dt>
 						<dd>
@@ -68,7 +68,7 @@
 		<div class="create-batch">
 			<form name="createBatch">
 				<fieldset>
-					<lagend>Create a batch based on filters</lagend>
+					<legend>Create a batch based on filters</legend>
 					<p>All filters you used on the left will be applied when you create a batch. You can further refine the selection.</p>
 					<p>
 						<input type="checkbox" name="giftWrap" id="giftWrap" class="gift-wrap" />
@@ -86,7 +86,7 @@
 				</fieldset>
 				<hr align="center">
 				<fieldset class="asin-base">
-					<lagend>Create a batch based on ASINs</lagend>
+					<legend>Create a batch based on ASINs</legend>
 					<p>
 						<label for="asin">ASIN:</label>
 						<input type="text" name="asin" id="asin" class="asin" />

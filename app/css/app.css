@@ -586,7 +586,7 @@ fieldset {
   padding-left: 20px;
 }
 /* line 20, ../sass/app.sass */
-fieldset lagend {
+fieldset legend {
   color: #e26e02;
   font-weight: bold;
 }

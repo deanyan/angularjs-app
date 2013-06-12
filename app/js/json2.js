@@ -1,7 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!DOCTYPE HTML>><HTML><HEAD>
-<META content="text/html; charset=utf-8" http-equiv="Content-Type"></HEAD>
-<BODY><PRE>/*
+/*
     json2.js
     2013-05-26
 
@@ -33,7 +30,7 @@
                         of nested structures. If it is omitted, the text will
                         be packed without extra whitespace. If it is a number,
                         it will specify the number of spaces to indent at each
-                        level. If it is a string (such as '\t' or '&amp;nbsp;'),
+                        level. If it is a string (such as '\t' or '&nbsp;'),
                         it contains the characters used to indent at each level.
 
             This method produces a JSON text from a JavaScript value.
@@ -51,7 +48,7 @@
                 Date.prototype.toJSON = function (key) {
                     function f(n) {
                         // Format integers to have at least two digits.
-                        return n &lt; 10 ? '0' + n : n;
+                        return n < 10 ? '0' + n : n;
                     }
 
                     return this.getUTCFullYear()   + '-' +
@@ -133,8 +130,8 @@
 
             myData = JSON.parse('["Date(09/09/2001)"]', function (key, value) {
                 var d;
-                if (typeof value === 'string' &amp;&amp;
-                        value.slice(0, 5) === 'Date(' &amp;&amp;
+                if (typeof value === 'string' &&
+                        value.slice(0, 5) === 'Date(' &&
                         value.slice(-1) === ')') {
                     d = new Date(value.slice(5, -1));
                     if (d) {
@@ -171,7 +168,7 @@ if (typeof JSON !== 'object') {
 
     function f(n) {
         // Format integers to have at least two digits.
-        return n &lt; 10 ? '0' + n : n;
+        return n < 10 ? '0' + n : n;
     }
 
     if (typeof Date.prototype.toJSON !== 'function') {
@@ -242,7 +239,7 @@ if (typeof JSON !== 'object') {
 
 // If the value has a toJSON method, call it to obtain a replacement value.
 
-        if (value &amp;&amp; typeof value === 'object' &amp;&amp;
+        if (value && typeof value === 'object' &&
                 typeof value.toJSON === 'function') {
             value = value.toJSON(key);
         }
@@ -300,7 +297,7 @@ if (typeof JSON !== 'object') {
 // for non-JSON values.
 
                 length = value.length;
-                for (i = 0; i &lt; length; i += 1) {
+                for (i = 0; i < length; i += 1) {
                     partial[i] = str(i, value) || 'null';
                 }
 
@@ -318,9 +315,9 @@ if (typeof JSON !== 'object') {
 
 // If the replacer is an array, use it to select the members to be stringified.
 
-            if (rep &amp;&amp; typeof rep === 'object') {
+            if (rep && typeof rep === 'object') {
                 length = rep.length;
-                for (i = 0; i &lt; length; i += 1) {
+                for (i = 0; i < length; i += 1) {
                     if (typeof rep[i] === 'string') {
                         k = rep[i];
                         v = str(k, value);
@@ -375,7 +372,7 @@ if (typeof JSON !== 'object') {
 // many spaces.
 
             if (typeof space === 'number') {
-                for (i = 0; i &lt; space; i += 1) {
+                for (i = 0; i < space; i += 1) {
                     indent += ' ';
                 }
 
@@ -389,7 +386,7 @@ if (typeof JSON !== 'object') {
 // Otherwise, throw an error.
 
             rep = replacer;
-            if (replacer &amp;&amp; typeof replacer !== 'function' &amp;&amp;
+            if (replacer && typeof replacer !== 'function' &&
                     (typeof replacer !== 'object' ||
                     typeof replacer.length !== 'number')) {
                 throw new Error('JSON.stringify');
@@ -419,7 +416,7 @@ if (typeof JSON !== 'object') {
 // that modifications can be made.
 
                 var k, v, value = holder[key];
-                if (value &amp;&amp; typeof value === 'object') {
+                if (value && typeof value === 'object') {
                     for (k in value) {
                         if (Object.prototype.hasOwnProperty.call(value, k)) {
                             v = walk(value, k);
@@ -487,4 +484,3 @@ if (typeof JSON !== 'object') {
         };
     }
 }());
-</PRE></BODY></HTML>
