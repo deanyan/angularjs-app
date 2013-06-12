@@ -1,0 +1,31 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "_normalize"
+@import "compass/css3"
+@import "compass/typography"
+@import "compass/utilities"
+
+
+.main
+  width: 960px
+  margin: 0 auto
+  
+.manage-orders
+  +clearfix
+  div
+    float: left
+  .filter-orders
+    width: 520px
+  .create-batch
+    width: 440px
+
+.order-list
+  table
+    $base-color : #ccc
+    //+table-scaffolding
+    td
+      padding: 5px
+

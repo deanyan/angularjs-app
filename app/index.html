@@ -1,13 +1,25 @@
 <!doctype html>
-<html lang="en" ng-app="orders-manage">
+<html xmlns:ng="http://angularjs.org" lang="en" id="ng-app" class="ng-app:orders-manage" ng-app="orders-manage">
 <head>
   <meta charset="utf-8">
   <title>Manage Orders</title>
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lte IE 8]>
+	<script src="js/json3.min.js"></script>
+	<script>
+		document.createElement('ng-include');
+		document.createElement('ng-pluralize');
+		document.createElement('ng-view');
+		// Optionally these for CSS
+		document.createElement('ng:include');
+		document.createElement('ng:pluralize');
+		document.createElement('ng:view');
+	</script>
+  <![endif]-->
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <div ng-view></div>
+  <div ng-view class="ng-view"></div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   -->
