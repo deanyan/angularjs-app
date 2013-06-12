@@ -1,6 +1,6 @@
 <div class="main">
+<h2>Manage orders</h2>
 	<section class="manage-orders">
-		<h2>Manage orders</h2>
 		<div class="filter-orders">
 			<fieldset>
 				<lagend>Filter orders</lagend>
@@ -21,13 +21,13 @@
 					<dl>
 						<dt>Expected ship date:</dt>
 						<dd>
-							<input type="date" ng-model="search.date" name="shipDate" id="shipDate" class="ship-date" value="2013-03-04" />
+							<input type="text" ng-model="search.date" name="shipDate" id="shipDate" class="ship-date" value="2013-03-04" />
 						</dd>
 					</dl>
 					<dl>
 						<dt>Expected ship time:</dt>
 						<dd>
-							<input type="time" ng-model="search.time" name="shipTime" id="shipTime" class="ship-time" /><span>e.g. 17:00</span>
+							<input type="text" ng-model="search.time" name="shipTime" id="shipTime" class="ship-time" /><span>e.g. 17:00</span>
 						</dd>
 					</dl>
 					<dl>
@@ -66,16 +66,16 @@
 			</fieldset>
 		</div><!--.filter-orders-->
 		<div class="create-batch">
-			<form>
+			<form name="createBatch">
 				<fieldset>
 					<lagend>Create a batch based on filters</lagend>
 					<p>All filters you used on the left will be applied when you create a batch. You can further refine the selection.</p>
 					<p>
-						<input type="radio" name="giftWrap" id="giftWrap" class="gift-wrap" />
+						<input type="checkbox" name="giftWrap" id="giftWrap" class="gift-wrap" />
 						<label for="giftWrap">Gift Wrap orders only</label>
 					</p>
 					<p>
-						<input type="radio" name="hazmat" id="hazmat" class="hazmat" />
+						<input type="checkbox" name="hazmat" id="hazmat" class="hazmat" />
 						<label for="hazmat">Hazmat orders only</label>
 					</p>
 					<p>
@@ -84,13 +84,13 @@
 						<button>Create a batch</button>
 					</p>
 				</fieldset>
-				<hr>
-				<fieldset>
-					<lagend>Create a batch based on filters</lagend>
+				<hr align="center">
+				<fieldset class="asin-base">
+					<lagend>Create a batch based on ASINs</lagend>
 					<p>
-						<label for="asin">Expected ship date:</label>
-						<input type="date" name="asin" id="asin" class="asin" />
-						<a href="#">Use top ASIN</a>
+						<label for="asin">ASIN:</label>
+						<input type="text" name="asin" id="asin" class="asin" />
+						<a href="#" class="use-asin">Use top ASIN</a>
 					</p>
 					<p>
 						<label for="batchSize">Batch size:</label>

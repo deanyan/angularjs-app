@@ -570,31 +570,176 @@ table {
   border-spacing: 0;
 }
 
-/* line 12, ../sass/app.sass */
+/* line 11, ../sass/app.sass */
+body {
+  font-size: 14px;
+}
+/* line 13, ../sass/app.sass */
+body h2 {
+  margin: 0.5em 0;
+  color: #555555;
+}
+
+/* line 17, ../sass/app.sass */
+fieldset {
+  border: none;
+  padding-left: 20px;
+}
+/* line 20, ../sass/app.sass */
+fieldset lagend {
+  color: #e26e02;
+  font-weight: bold;
+}
+
+/* line 23, ../sass/app.sass */
 .main {
-  width: 960px;
+  width: 870px;
   margin: 0 auto;
 }
 
-/* line 16, ../sass/app.sass */
+/* line 27, ../sass/app.sass */
 .manage-orders {
   overflow: hidden;
   *zoom: 1;
+  border: 1px solid silver;
 }
-/* line 18, ../sass/app.sass */
-.manage-orders div {
-  float: left;
+/* line 30, ../sass/app.sass */
+.manage-orders input {
+  padding: 3px;
 }
-/* line 20, ../sass/app.sass */
+/* line 32, ../sass/app.sass */
 .manage-orders .filter-orders {
-  width: 520px;
+  float: left;
+  width: 480px;
 }
-/* line 22, ../sass/app.sass */
+/* line 35, ../sass/app.sass */
+.manage-orders .filter-orders label {
+  margin-right: 10px;
+}
+/* line 37, ../sass/app.sass */
+.manage-orders button {
+  padding: 0.3em 1em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF65b549', endColorstr='#FFB39400');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #87d96a), color-stop(50%, #65b549), color-stop(100%, #62b246));
+  background: -webkit-linear-gradient(#87d96a, #65b549 50%, #62b246);
+  background: -moz-linear-gradient(#87d96a, #65b549 50%, #62b246);
+  background: -o-linear-gradient(#87d96a, #65b549 50%, #62b246);
+  background: linear-gradient(#87d96a, #65b549 50%, #62b246);
+  border: 1px solid #5caa40;
+  color: black;
+  font-weight: bold;
+}
+/* line 57, ../sass/app.sass */
 .manage-orders .create-batch {
-  width: 440px;
+  float: right;
+  width: 388px;
+  background: #efefef;
+}
+/* line 61, ../sass/app.sass */
+.manage-orders .create-batch input {
+  margin-right: 10px;
+}
+/* line 63, ../sass/app.sass */
+.manage-orders .create-batch input.batch-size {
+  width: 70px;
+}
+/* line 65, ../sass/app.sass */
+.manage-orders .create-batch hr {
+  width: 87%;
+  margin: 0 0 0 20px;
+  color: #cccccc;
+}
+/* line 69, ../sass/app.sass */
+.manage-orders .create-batch p {
+  margin: 0.7em 0;
+}
+/* line 73, ../sass/app.sass */
+.manage-orders .create-batch .asin-base p {
+  margin: 1.1em 0;
+}
+/* line 75, ../sass/app.sass */
+.manage-orders .create-batch button {
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFeeeeee', endColorstr='#FFB39400');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(50%, #eeeeee), color-stop(100%, #ececec));
+  background: -webkit-linear-gradient(#f9f9f9, #eeeeee 50%, #ececec);
+  background: -moz-linear-gradient(#f9f9f9, #eeeeee 50%, #ececec);
+  background: -o-linear-gradient(#f9f9f9, #eeeeee 50%, #ececec);
+  background: linear-gradient(#f9f9f9, #eeeeee 50%, #ececec);
+  border: 1px solid #dadada;
+  color: black;
+}
+/* line 85, ../sass/app.sass */
+.manage-orders dl {
+  margin: 1em 0;
+}
+/* line 87, ../sass/app.sass */
+.manage-orders dl dt {
+  float: left;
+  width: 125px;
+  padding-right: 5px;
+  text-align: right;
+}
+/* line 93, ../sass/app.sass */
+.manage-orders dl .ship-time {
+  margin-right: 10px;
 }
 
-/* line 29, ../sass/app.sass */
+/* line 96, ../sass/app.sass */
+.use-asin {
+  color: #6a98e1;
+}
+
+/* line 99, ../sass/app.sass */
+.order-list {
+  margin-top: 10px;
+  border: 1px solid silver;
+  padding: 5px;
+}
+/* line 103, ../sass/app.sass */
+.order-list table {
+  width: 100%;
+}
+/* line 2, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table th {
+  background-color: white;
+}
+/* line 4, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table th.even, .order-list table th:nth-child(2n) {
+  background-color: #eeeeee;
+}
+/* line 8, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table tr.odd td, .order-list table tr:nth-child(2n+1) td {
+  background-color: #eeeeee;
+}
+/* line 10, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table tr.odd td.even, .order-list table tr.odd td:nth-child(2n), .order-list table tr:nth-child(2n+1) td.even, .order-list table tr:nth-child(2n+1) td:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 14, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table tr.even td {
+  background-color: #eeeeee;
+}
+/* line 16, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table tr.even td.even, .order-list table tr.even td:nth-child(2n) {
+  background-color: #dddddd;
+}
+/* line 19, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table tfoot th, .order-list table tfoot td {
+  background-color: white;
+}
+/* line 21, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+.order-list table tfoot th.even, .order-list table tfoot th:nth-child(2n), .order-list table tfoot td.even, .order-list table tfoot td:nth-child(2n) {
+  background-color: #eeeeee;
+}
+/* line 107, ../sass/app.sass */
 .order-list table td {
   padding: 5px;
 }

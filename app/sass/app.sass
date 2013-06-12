@@ -8,24 +8,102 @@
 @import "compass/typography"
 @import "compass/utilities"
 
-
+body
+  font-size: 14px
+  h2
+    margin: 0.5em 0
+    color: #555
+	
+fieldset
+  border: none
+  padding-left: 20px
+  lagend
+    color: #e26e02
+    font-weight: bold
 .main
-  width: 960px
+  width: 870px
   margin: 0 auto
   
 .manage-orders
   +clearfix
-  div
-    float: left
+  border: 1px solid #c0c0c0
+  input
+    padding: 3px
   .filter-orders
-    width: 520px
+    float: left
+    width: 480px
+    label
+      margin-right: 10px
+  button
+    padding: 0.3em 1em
+    display: inline-block
+    cursor: pointer
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    -ms-border-radius: 5px
+    -o-border-radius: 5px
+    border-radius: 5px
+    *zoom: 1
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF65b549', endColorstr='#FFB39400')
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #87d96a), color-stop(50%, #65b549), color-stop(100%, #62b246))
+    background: -webkit-linear-gradient(#87d96a, #65b549 50%, #62b246)
+    background: -moz-linear-gradient(#87d96a, #65b549 50%, #62b246)
+    background: -o-linear-gradient(#87d96a, #65b549 50%, #62b246)
+    background: linear-gradient(#87d96a, #65b549 50%, #62b246)
+    border: 1px solid #5caa40
+    color: #000
+    font-weight: bold
+		 
   .create-batch
-    width: 440px
-
+    float: right
+    width: 388px
+    background: #EFEFEF
+    input
+      margin-right: 10px
+    input.batch-size
+      width: 70px
+    hr
+      width: 87%
+      margin: 0 0 0 20px
+      color: #ccc
+    p
+      margin: 0.7em 0
+	  
+    .asin-base
+      p
+        margin: 1.1em 0
+    button
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFeeeeee', endColorstr='#FFB39400')
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(50%, #eeeeee), color-stop(100%, #ececec))
+      background: -webkit-linear-gradient(#f9f9f9, #eeeeee 50%, #ececec)
+      background: -moz-linear-gradient(#f9f9f9, #eeeeee 50%, #ececec)
+      background: -o-linear-gradient(#f9f9f9, #eeeeee 50%, #ececec)
+      background: linear-gradient(#f9f9f9, #eeeeee 50%, #ececec)
+      border: 1px solid #dadada
+      color: #000
+	
+  dl
+    margin: 1em 0
+    dt
+      float: left
+      width: 125px
+      padding-right: 5px
+      text-align: right
+	  
+    .ship-time
+      margin-right: 10px
+	  
+.use-asin
+  color: #6a98e1 
+	
 .order-list
+  margin-top: 10px
+  border: 1px solid #c0c0c0
+  padding: 5px
   table
-    $base-color : #ccc
-    //+table-scaffolding
+    $base-color : #eee
+    width: 100%
+    +alternating-rows-and-columns($base-color, adjust-hue($base-color, -20deg), #111)
     td
       padding: 5px
 
