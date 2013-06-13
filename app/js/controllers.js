@@ -17,11 +17,7 @@ function OrderListCtrl($scope, $http, $filter) {
 		if($scope.search.track !== undefined && $scope.search.track === false) {
 			delete $scope.search.track;
 		}
-		
-		if($scope.datepicker.track !== undefined) {
-			$scope.orders = $filter('filter')(source, $scope.datepicker.date);
-		}
-			
+
 		$scope.orders = $filter('filter')(source, $scope.search);
 	};
 };
