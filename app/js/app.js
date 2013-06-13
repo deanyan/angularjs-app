@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('orders-manage', []).
+angular.module('orders-manage', ['$strap.directives']).
 	config(['$routeProvider', function($routeProvider){
 	$routeProvider.
 		when('/orders', {templateUrl: 'partials/order-list.html', controller: OrderListCtrl}).

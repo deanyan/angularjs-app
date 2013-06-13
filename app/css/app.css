@@ -248,7 +248,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -707,39 +707,63 @@ fieldset legend {
 .order-list table {
   width: 100%;
 }
-/* line 2, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 2, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table th {
   background-color: white;
 }
-/* line 4, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 4, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table th.even, .order-list table th:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 8, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 8, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.odd td, .order-list table tr:nth-child(2n+1) td {
   background-color: #eeeeee;
 }
-/* line 10, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 10, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.odd td.even, .order-list table tr.odd td:nth-child(2n), .order-list table tr:nth-child(2n+1) td.even, .order-list table tr:nth-child(2n+1) td:nth-child(2n) {
   background-color: #dddddd;
 }
-/* line 14, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 14, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.even td {
   background-color: #eeeeee;
 }
-/* line 16, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 16, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.even td.even, .order-list table tr.even td:nth-child(2n) {
   background-color: #dddddd;
 }
-/* line 19, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 19, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tfoot th, .order-list table tfoot td {
   background-color: white;
 }
-/* line 21, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
+/* line 21, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tfoot th.even, .order-list table tfoot th:nth-child(2n), .order-list table tfoot td.even, .order-list table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
 /* line 107, ../sass/app.sass */
 .order-list table td {
   padding: 5px;
+}
+
+/* line 110, ../sass/app.sass */
+#shipDate {
+  background: url(../img/datepicker.gif) right top no-repeat;
+}
+
+/* line 112, ../sass/app.sass */
+.dropdown-menu {
+  background-clip: padding-box;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  float: left;
+  left: 0;
+  list-style: none outside none;
+  margin: 2px 0 0;
+  min-width: 160px;
+  padding: 5px 0;
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
 }
