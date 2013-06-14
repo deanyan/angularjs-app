@@ -1,1 +1,1 @@
-web: node scripts/web-server.js 8000
+web: node scripts/web-server.js
