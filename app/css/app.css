@@ -578,12 +578,12 @@ body {
 body h2 {
   margin: 0.5em 0;
   color: #555555;
+  font-weight: normal;
 }
 
-/* line 16, ../sass/app.sass */
+/* line 17, ../sass/app.sass */
 fieldset {
   border: none;
-  padding-left: 20px;
 }
 /* line 19, ../sass/app.sass */
 fieldset legend {
@@ -618,13 +618,44 @@ fieldset legend {
 /* line 35, ../sass/app.sass */
 .manage-orders .filter-orders {
   float: left;
+  position: relative;
   width: 480px;
 }
-/* line 38, ../sass/app.sass */
+/* line 39, ../sass/app.sass */
+.manage-orders .filter-orders:after, .manage-orders .filter-orders:before {
+  left: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 47, ../sass/app.sass */
+.manage-orders .filter-orders:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: white;
+  border-width: 10px;
+  top: 50%;
+  margin-top: -10px;
+}
+/* line 53, ../sass/app.sass */
+.manage-orders .filter-orders:before {
+  border-color: rgba(204, 204, 204, 0);
+  border-left-color: #cccccc;
+  border-width: 11px;
+  top: 50%;
+  margin-top: -11px;
+}
+/* line 59, ../sass/app.sass */
 .manage-orders .filter-orders label {
   margin-right: 10px;
 }
-/* line 40, ../sass/app.sass */
+/* line 61, ../sass/app.sass */
+.manage-orders .filter-orders input[type="text"] {
+  width: 142px;
+}
+/* line 63, ../sass/app.sass */
 .manage-orders button {
   padding: 0.3em 1em;
   display: inline-block;
@@ -644,35 +675,42 @@ fieldset legend {
   color: black;
   font-weight: bold;
 }
-/* line 51, ../sass/app.sass */
+/* line 74, ../sass/app.sass */
 .manage-orders .create-batch {
   float: right;
   width: 388px;
   background: #efefef;
 }
-/* line 55, ../sass/app.sass */
+/* line 78, ../sass/app.sass */
+.manage-orders .create-batch fieldset {
+  padding-left: 20px;
+}
+/* line 80, ../sass/app.sass */
 .manage-orders .create-batch input {
   margin-right: 10px;
 }
-/* line 57, ../sass/app.sass */
+/* line 82, ../sass/app.sass */
 .manage-orders .create-batch input.batch-size {
-  width: 70px;
+  width: 65px;
 }
-/* line 59, ../sass/app.sass */
+/* line 84, ../sass/app.sass */
 .manage-orders .create-batch hr {
   width: 90%;
   margin: 0 0 0 20px;
-  color: #cccccc;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-/* line 63, ../sass/app.sass */
+/* line 91, ../sass/app.sass */
 .manage-orders .create-batch p {
   margin: 0.7em 0;
 }
-/* line 67, ../sass/app.sass */
+/* line 95, ../sass/app.sass */
 .manage-orders .create-batch .asin-base p {
   margin: 1.1em 0;
 }
-/* line 69, ../sass/app.sass */
+/* line 97, ../sass/app.sass */
 .manage-orders .create-batch button {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #f9f9f9), color-stop(70%, #eeeeee), color-stop(100%, #ececec));
   background-image: -webkit-linear-gradient(#f9f9f9 30%, #eeeeee 70%, #ececec);
@@ -682,34 +720,35 @@ fieldset legend {
   border: 1px solid #dadada;
   color: black;
 }
-/* line 74, ../sass/app.sass */
+/* line 102, ../sass/app.sass */
 .manage-orders dl {
   margin: 1em 0;
 }
-/* line 76, ../sass/app.sass */
+/* line 104, ../sass/app.sass */
 .manage-orders dl dt {
   float: left;
   width: 125px;
   padding-right: 5px;
   text-align: right;
 }
-/* line 82, ../sass/app.sass */
+/* line 110, ../sass/app.sass */
 .manage-orders dl .ship-time {
   margin-right: 10px;
 }
 
-/* line 85, ../sass/app.sass */
+/* line 113, ../sass/app.sass */
 .use-asin {
   color: #6a98e1;
 }
 
-/* line 88, ../sass/app.sass */
+/* line 116, ../sass/app.sass */
 .order-list {
   margin-top: 10px;
   border: 1px solid silver;
   padding: 5px;
+  margin-bottom: 2em;
 }
-/* line 92, ../sass/app.sass */
+/* line 121, ../sass/app.sass */
 .order-list table {
   width: 100%;
 }
@@ -745,18 +784,18 @@ fieldset legend {
 .order-list table tfoot th.even, .order-list table tfoot th:nth-child(2n), .order-list table tfoot td.even, .order-list table tfoot td:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 96, ../sass/app.sass */
+/* line 125, ../sass/app.sass */
 .order-list table td {
   padding: 5px;
   text-align: center;
 }
 
-/* line 100, ../sass/app.sass */
+/* line 129, ../sass/app.sass */
 #shipDate {
-  background: url(../img/datepicker.gif) 130px center no-repeat;
+  background: url(../img/datepicker.gif) 128px center no-repeat;
 }
 
-/* line 103, ../sass/app.sass */
+/* line 132, ../sass/app.sass */
 .dropdown-menu {
   background-clip: padding-box;
   background-color: white;
@@ -775,7 +814,24 @@ fieldset legend {
   z-index: 1000;
 }
 
-/* line 120, ../sass/app.sass */
+/* line 149, ../sass/app.sass */
 .oldie .dropdown-menu {
   border: 1px solid silver;
+}
+
+/* line 155, ../sass/app.sass */
+.datepicker table tr td.active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #e26e02), color-stop(70%, #e26e02), color-stop(100%, #e26e02));
+  background-image: -webkit-linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+  background-image: -moz-linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+  background-image: -o-linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+  background-image: linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+}
+/* line 157, ../sass/app.sass */
+.datepicker table tr td.active:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #e26e02), color-stop(70%, #e26e02), color-stop(100%, #e26e02));
+  background-image: -webkit-linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+  background-image: -moz-linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+  background-image: -o-linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
+  background-image: linear-gradient(#e26e02 30%, #e26e02 70%, #e26e02);
 }

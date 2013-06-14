@@ -12,10 +12,10 @@ body
   h2
     margin: 0.5em 0
     color: #555
+    font-weight: normal
 	
 fieldset
   border: none
-  padding-left: 20px
   legend
     padding-top: 10px
     color: #e26e02
@@ -34,9 +34,32 @@ fieldset
     border: 1px solid #aaa
   .filter-orders
     float: left
+    position: relative
     width: 480px
+    &:after, &:before
+      left: 100%
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+    &:after
+      border-color: rgba(255, 255, 255, 0)
+      border-left-color: #ffffff
+      border-width: 10px
+      top: 50%
+      margin-top: -10px
+    &:before
+      border-color: rgba(204, 204, 204, 0)
+      border-left-color: #cccccc
+      border-width: 11px
+      top: 50%
+      margin-top: -11px
     label
       margin-right: 10px
+    input[type="text"]
+      width: 142px
   button
     padding: 0.3em 1em
     display: inline-block
@@ -52,14 +75,19 @@ fieldset
     float: right
     width: 388px
     background: #EFEFEF
+    fieldset
+      padding-left: 20px
     input
       margin-right: 10px
     input.batch-size
-      width: 70px
+      width: 65px
     hr
       width: 90%
       margin: 0 0 0 20px
-      color: #ccc
+      border: 0
+      height: 0
+      border-top: 1px solid rgba(0, 0, 0, 0.1)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3)
     p
       margin: 0.7em 0
 	  
@@ -89,6 +117,7 @@ fieldset
   margin-top: 10px
   border: 1px solid #c0c0c0
   padding: 5px
+  margin-bottom: 2em
   table
     $base-color : #eee
     width: 100%
@@ -98,7 +127,7 @@ fieldset
       text-align: center
 
 #shipDate
-  background: url(../img/datepicker.gif) 130px center no-repeat
+  background: url(../img/datepicker.gif) 128px center no-repeat
 
 .dropdown-menu
   background-clip: padding-box
@@ -119,3 +148,11 @@ fieldset
 .oldie
   .dropdown-menu
     border: 1px solid #c0c0c0
+
+.datepicker
+  table
+    tr
+      td.active
+        +background-image(linear-gradient(#E26E02 30%, #E26E02 70%, #E26E02))
+        &:hover
+          +background-image(linear-gradient(#E26E02 30%, #E26E02 70%, #E26E02))
