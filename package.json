@@ -2,7 +2,7 @@
   "name": "angularjs-app",
   "version": "0.0.1",
   "description": "An AngularJS app on Heroku.",
-  "main": "scripts/web-server.js 8080",
+  "main": "app/index.html"
   "directories": {
     "test": "test"
   },
