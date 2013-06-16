@@ -678,7 +678,8 @@ fieldset legend {
 /* line 74, ../sass/app.sass */
 .manage-orders .create-batch {
   float: right;
-  width: 388px;
+  width: 387px;
+  border-left: 1px solid #ccc;
   background: #efefef;
 }
 /* line 78, ../sass/app.sass */
