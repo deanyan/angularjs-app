@@ -28,7 +28,6 @@ Move your sight on to right top of the page; here you see the Create batch area,
 
 Given quick prototype purpose, the whole program structure based on AngularJS structure for its great two-way data-binding capabilities, though the function design is clicking ¡®Filter Orders¡± driven, not the default blur-and-change behavior in AnglarJS. To view filter-by-change demo, please check [http://code.evaljs.com/app/pretest.html#/filter-by-change](http://code.evaljs.com/app/pretest.html#/filter-by-change).
 
-For privacy, in terms of credentials, I will remove this app from Heroku, once you finish the page review. 
 
 The page is served by a NodeJS static server and deployed to Heroku. The app will last only one month, and added noindex and nofollow meta, to make search engine bypass this page.
 
