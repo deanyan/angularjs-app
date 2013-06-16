@@ -1,0 +1,128 @@
+<div class="main">
+<h2>Manage orders</h2>
+	<section class="manage-orders">
+		<div class="filter-orders">
+			<fieldset>
+				<legend>Filter orders</legend>
+				<form name="form" ng-model="filterOrders" class="ng-model: filterOrders">
+					<dl>
+						<dt>Order status:</dt>
+						<dd>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="new" id="newOrder" class="new-order" />
+							<label for="newOrder">New</label>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="accepted" id="acceptedOrder" class="accept-order" />
+							<label for="acceptedOrder">Accepted</label>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="packed" id="packedOrder" class="packed-order" />
+							<label for="packedOrder">Packed</label>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="canceled" id="canceledOrder" class="canceled-order" />
+							<label for="canceledOrder">Canceled</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Expected ship date:</dt>
+						<dd>
+							<input type="text" name="shipDate" id="shipDate" class="ship-date" ng-model="datepicker.date" data-date-format="yyyy-mm-dd" bs-datepicker />
+						</dd>
+					</dl>
+					<dl>
+						<dt>Expected ship time:</dt>
+						<dd>
+							<input type="text" ng-model="search.time" name="shipTime" id="shipTime" class="ship-time" /><span>e.g. 17:00</span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Multi/Single items:</dt>
+						<dd>
+						<input type="radio" ng-model="search.item" name="itemType" value="multi" id="multiType" class="multi-type" />
+						<label for="multiType">Multi</label>
+						<input type="radio" ng-model="search.item" name="itemType" value="single" id="singleType" class="single-type" />
+						<label for="singleType">Single</label>
+						<input type="radio" ng-model="search.item" name="itemType" value="both" id="bothType" class="both-type" />
+						<label for="bothType">Both</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt>SIOC:</dt>
+						<dd>
+						<input type="radio" ng-model="search.sioc" name="sioc" value="sioc" id="sioc" class="sioc" />
+						<label for="sioc">SIOC</label>
+						<input type="radio" ng-model="search.sioc" name="sioc" value="non" id="nonSioc" class="non-sioc" />
+						<label for="nonSioc">Non-SIOC</label>
+						<input type="radio" ng-model="search.sioc" name="sioc" value="both" id="both" class="both" />
+						<label for="both">Both</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt>Fast Track:</dt>
+						<dd>
+						<input type="checkbox" ng-model="search.track" name="fastTrack" id="fastTrack" class="fast-track" />
+						</dd>
+					</dl>
+					<!--<dl>
+						<dt>&nbsp;</dt>
+						<dd><button value="Filter Orders" ng-click="filter()">Filter Orders</button></dd>
+					</dl>-->
+				</form>
+			</fieldset>
+		</div><!--.filter-orders-->
+		<div class="create-batch">
+			<form name="createBatch">
+				<fieldset>
+					<legend>Create a batch based on filters</legend>
+					<p>All filters you used on the left will be applied when you create a batch. You can further refine the selection.</p>
+					<p>
+						<input type="checkbox" name="giftWrap" id="giftWrap" class="gift-wrap" />
+						<label for="giftWrap">Gift Wrap orders only</label>
+					</p>
+					<p>
+						<input type="checkbox" name="hazmat" id="hazmat" class="hazmat" />
+						<label for="hazmat">Hazmat orders only</label>
+					</p>
+					<p>
+						<label for="batchSize">Batch size:</label>
+						<input type="text" name="batchSize" id="batchSize" class="batch-size" placeholder="{{orders.length}}" />
+						<button>Create a batch</button>
+					</p>
+				</fieldset>
+				<hr align="center">
+				<fieldset class="asin-base">
+					<legend>Create a batch based on ASINs</legend>
+					<p>
+						<label for="asin">ASIN:</label>
+						<input type="text" name="asin" id="asin" class="asin" />
+						<a href="#" class="use-asin">Use top ASIN</a>
+					</p>
+					<p>
+						<label for="batchSize">Batch size:</label>
+						<input type="text" name="batchSize" id="batchSize" class="batch-size" placeholder="{{orders.length}}" />
+						<button>Create a batch</button>
+					</p>
+				</fieldset>
+			</form>			
+		</div><!--.create-batch-->
+	</section>
+	<section class="order-list">
+		<table>
+			<thead>
+				<tr>
+					<th>Order status</th>
+					<th>Expected ship date</th>
+					<th>Expected ship time</th>
+					<th>Multi/Single items</th> 
+					<th>SIOC</th>
+					<th>Fast Track</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="order in orders | filter: search">
+					<td>{{order.status}}<ttd>
+					<td>{{order.date}}</td>
+					<td>{{order.time}}</td>
+					<td>{{order.item}}</td>
+					<td>{{order.sioc}}</td>
+					<td>{{order.track}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</div>

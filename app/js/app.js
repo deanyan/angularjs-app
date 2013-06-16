@@ -5,6 +5,7 @@
 angular.module('orders-manage', ['$strap.directives']).
 	config(['$routeProvider', function($routeProvider){
 	$routeProvider.
-		when('/orders', {templateUrl: 'partials/order-list.html', controller: OrderListCtrl}).
-		otherwise({redirectTo: '/orders'});
+		when('/filter-by-click', {templateUrl: 'partials/filter-orders.html', controller: OrderListCtrl}).
+		when('/filter-by-change', {templateUrl: 'partials/filter-orders2.html', controller: OrderListCtrl}).
+		otherwise({redirectTo: '/filter-by-click'});
 	}]);
