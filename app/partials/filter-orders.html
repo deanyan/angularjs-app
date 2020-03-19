@@ -1,37 +1,37 @@
 <div class="main">
-<h2>Manage orders</h2>
+<h2>Manage Instances</h2>
 	<section class="manage-orders">
 		<div class="filter-orders">
 			<fieldset>
-				<legend>Filter orders</legend>
+				<legend>Filter instances</legend>
 				<form name="form" ng-model="filterOrders" class="ng-model: filterOrders">
 					<dl>
-						<dt>Order status:</dt>
+						<dt>Instances status:</dt>
 						<dd>
 							<input type="radio" ng-model="search.status" name="orderStatus" value="new" id="newOrder" class="new-order" />
 							<label for="newOrder">New</label>
-							<input type="radio" ng-model="search.status" name="orderStatus" value="accepted" id="acceptedOrder" class="accept-order" />
-							<label for="acceptedOrder">Accepted</label>
-							<input type="radio" ng-model="search.status" name="orderStatus" value="packed" id="packedOrder" class="packed-order" />
-							<label for="packedOrder">Packed</label>
-							<input type="radio" ng-model="search.status" name="orderStatus" value="canceled" id="canceledOrder" class="canceled-order" />
-							<label for="canceledOrder">Canceled</label>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="created" id="acceptedOrder" class="accept-order" />
+							<label for="acceptedOrder">Created</label>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="served" id="packedOrder" class="packed-order" />
+							<label for="packedOrder">Served</label>
+							<input type="radio" ng-model="search.status" name="orderStatus" value="removed" id="canceledOrder" class="canceled-order" />
+							<label for="canceledOrder">Removed</label>
 						</dd>
 					</dl>
 					<dl>
-						<dt>Expected ship date:</dt>
+						<dt>Expected srv date:</dt>
 						<dd>
 							<input type="text" name="shipDate" id="shipDate" class="ship-date" ng-model="datepicker.date" data-date-format="yyyy-mm-dd" bs-datepicker />
 						</dd>
 					</dl>
 					<dl>
-						<dt>Expected ship time:</dt>
+						<dt>Expected srv time:</dt>
 						<dd>
 							<input type="text" ng-model="search.time" name="shipTime" id="shipTime" class="ship-time" /><span>e.g. 17:00</span>
 						</dd>
 					</dl>
 					<dl>
-						<dt>Multi/Single items:</dt>
+						<dt>Multi/Single cores:</dt>
 						<dd>
 						<input type="radio" ng-model="search.item" name="itemType" value="multi" id="multiType" class="multi-type" />
 						<label for="multiType">Multi</label>
@@ -42,12 +42,12 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt>SIOC:</dt>
+						<dt>Type:</dt>
 						<dd>
-						<input type="radio" ng-model="search.sioc" name="sioc" value="sioc" id="sioc" class="sioc" />
-						<label for="sioc">SIOC</label>
-						<input type="radio" ng-model="search.sioc" name="sioc" value="non" id="nonSioc" class="non-sioc" />
-						<label for="nonSioc">Non-SIOC</label>
+						<input type="radio" ng-model="search.sioc" name="sioc" value="inside" id="sioc" class="sioc" />
+						<label for="sioc">Inside</label>
+						<input type="radio" ng-model="search.sioc" name="sioc" value="outside" id="nonSioc" class="non-sioc" />
+						<label for="nonSioc">Outside</label>
 						<input type="radio" ng-model="search.sioc" name="sioc" value="both" id="both" class="both" />
 						<label for="both">Both</label>
 						</dd>
@@ -60,7 +60,7 @@
 					</dl>
 					<dl>
 						<dt>&nbsp;</dt>
-						<dd><button value="Filter Orders" ng-click="filter()">Filter Orders</button></dd>
+						<dd><button value="Filter Orders" ng-click="filter()">Filter Instances</button></dd>
 					</dl>
 				</form>
 			</fieldset>
@@ -68,34 +68,34 @@
 		<div class="create-batch">
 			<form name="createBatch">
 				<fieldset>
-					<legend>Create a batch based on filters</legend>
-					<p>All filters you used on the left will be applied when you create a batch. You can further refine the selection.</p>
+					<legend> Random Number Generator Device virtio</legend>
+					<p>The libvirt Compute Driver Options for Glance Images. These are properties specific to compute drivers.</p>
 					<p>
 						<input type="checkbox" name="giftWrap" id="giftWrap" class="gift-wrap" />
-						<label for="giftWrap">Gift Wrap orders only</label>
+						<label for="giftWrap">Min. Disk</label>
 					</p>
 					<p>
 						<input type="checkbox" name="hazmat" id="hazmat" class="hazmat" />
-						<label for="hazmat">Hazmat orders only</label>
+						<label for="hazmat">Min. RAM</label>
 					</p>
 					<p>
-						<label for="batchSize">Batch size:</label>
+						<label for="batchSize">Inst number:</label>
 						<input type="text" name="batchSize" id="batchSize" class="batch-size" placeholder="{{orders.length}}" />
-						<button>Create a batch</button>
+						<button>Create an image</button>
 					</p>
 				</fieldset>
 				<hr align="center">
 				<fieldset class="asin-base">
-					<legend>Create a batch based on ASINs</legend>
+					<legend>Create an image based on existing</legend>
 					<p>
-						<label for="asin">ASIN:</label>
+						<label for="asin">NO:</label>
 						<input type="text" name="asin" id="asin" class="asin" />
-						<a href="#" class="use-asin">Use top ASIN</a>
+						<a href="#" class="use-asin">Use existing images</a>
 					</p>
 					<p>
-						<label for="batchSize">Batch size:</label>
+						<label for="batchSize">Inst number:</label>
 						<input type="text" name="batchSize" id="batchSize" class="batch-size" placeholder="{{orders.length}}" />
-						<button>Create a batch</button>
+						<button>Create an image</button>
 					</p>
 				</fieldset>
 			</form>			
@@ -105,12 +105,12 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Order status</th>
-					<th>Expected ship date</th>
-					<th>Expected ship time</th>
-					<th>Multi/Single items</th> 
-					<th>SIOC</th>
-					<th>Fast Track</th>
+					<th>Instances status</th>
+					<th>Expected srv date</th>
+					<th>Expected srv time</th>
+					<th>Multi/Single cores</th>
+					<th>Type</th>
+					<th>Finished</th>
 				</tr>
 			</thead>
 			<tbody>
