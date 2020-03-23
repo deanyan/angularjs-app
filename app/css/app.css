@@ -604,6 +604,7 @@ fieldset legend {
   overflow: hidden;
   *zoom: 1;
   border: 1px solid silver;
+  background: #195fa9;
 }
 /* line 31, ../sass/app.sass */
 .manage-orders input[type="text"] {
@@ -620,6 +621,7 @@ fieldset legend {
   float: left;
   position: relative;
   width: 480px;
+  background: #fff;
 }
 /* line 39, ../sass/app.sass */
 .manage-orders .filter-orders:after, .manage-orders .filter-orders:before {
@@ -632,21 +634,21 @@ fieldset legend {
   pointer-events: none;
 }
 /* line 47, ../sass/app.sass */
-.manage-orders .filter-orders:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-left-color: white;
-  border-width: 10px;
-  top: 50%;
-  margin-top: -10px;
-}
-/* line 53, ../sass/app.sass */
-.manage-orders .filter-orders:before {
-  border-color: rgba(204, 204, 204, 0);
-  border-left-color: #cccccc;
-  border-width: 11px;
-  top: 50%;
-  margin-top: -11px;
-}
+/*.manage-orders .filter-orders:after {*/
+/*  border-color: rgba(255, 255, 255, 0);*/
+/*  border-left-color: white;*/
+/*  border-width: 10px;*/
+/*  top: 50%;*/
+/*  margin-top: -10px;*/
+/*}*/
+/*!* line 53, ../sass/app.sass *!*/
+/*.manage-orders .filter-orders:before {*/
+/*  border-color: rgba(204, 204, 204, 0);*/
+/*  border-left-color: #cccccc;*/
+/*  border-width: 11px;*/
+/*  top: 50%;*/
+/*  margin-top: -11px;*/
+/*}*/
 /* line 59, ../sass/app.sass */
 .manage-orders .filter-orders label {
   margin-right: 10px;
@@ -672,7 +674,7 @@ fieldset legend {
   width: 387px;
   color: #fff;
   border-left: 1px solid #002f60;
-  background: #195fa9;
+  padding-top: 45px;
 }
 /* line 78, ../sass/app.sass */
 .manage-orders .create-batch fieldset {
@@ -747,7 +749,7 @@ fieldset legend {
 }
 /* line 4, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table th.even, .order-list table th:nth-child(2n) {
-  background-color: #eeeeee;
+  /*background-color: #eeeeee;*/
 }
 /* line 8, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.odd td, .order-list table tr:nth-child(2n+1) td {
@@ -755,7 +757,7 @@ fieldset legend {
 }
 /* line 10, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.odd td.even, .order-list table tr.odd td:nth-child(2n), .order-list table tr:nth-child(2n+1) td.even, .order-list table tr:nth-child(2n+1) td:nth-child(2n) {
-  background-color: #dddddd;
+  /*background-color: #dddddd;*/
 }
 /* line 14, C:/Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/tables/_alternating-rows-and-columns.scss */
 .order-list table tr.even td {
